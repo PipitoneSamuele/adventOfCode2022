@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 import day1.Day1;
+import day2.Day2;
 
 public class Main {
 
@@ -19,6 +20,7 @@ public class Main {
 		
 		//Answers classes
 		Day1 day1 = new Day1();
+		Day2 day2 = new Day2();
 		
 		System.out.println("This is my take on advent of code 2022. Happy holidays!");
 		
@@ -26,13 +28,19 @@ public class Main {
 			
 			System.out.println("\nSelect the day to choose the answer");
 			System.out.println("1");
+			System.out.println("2");
 			System.out.println("");
 			answer = scInt.nextInt();
 			
 			switch(answer) {
 				case 1: {
-					System.out.println("Part 1:\n " + day1.getAnswer());
-					System.out.println("Part 2:\n " + day1.getAnswerPart2() + " -> wrong");
+					System.out.println("Part 1:\n" + day1.getAnswer());
+					System.out.println("Part 2:\n" + day1.getAnswerPart2() + " -> wrong");
+					break;
+				}
+				case 2:{
+					System.out.println("Part 1:\n" + day2.getAnswer());
+					System.out.println("Part 2:\n" + day2.getAnswerPart2());
 					break;
 				}
 				default: 
