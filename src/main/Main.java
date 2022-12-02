@@ -31,7 +31,8 @@ public class Main {
 			
 			switch(answer) {
 				case 1: {
-					System.out.println("Result is: " + day1.getAnswer()); 
+					System.out.println("Part 1:\n " + day1.getAnswer());
+					System.out.println("Part 2:\n " + day1.getAnswerPart2() + " -> wrong");
 					break;
 				}
 				default: 
