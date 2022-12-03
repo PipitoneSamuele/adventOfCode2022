@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import day1.Day1;
 import day2.Day2;
+import day3.Day3;
 
 public class Main {
 
@@ -20,7 +21,8 @@ public class Main {
 		
 		//Answers classes
 		Day1 day1 = new Day1();
-		Day2 day2 = new Day2();
+		Day2 day2 = new Day2(); 
+		Day3 day3 = new Day3(); 
 		
 		System.out.println("This is my take on advent of code 2022. Happy holidays!");
 		
@@ -40,6 +42,11 @@ public class Main {
 				}
 				case 2:{
 					System.out.println("Part 1:\n" + day2.getAnswer());
+					System.out.println("Part 2:\n" + day2.getAnswerPart2());
+					break;
+				}
+				case 3:{
+					System.out.println("Part 1:\n" + day3.getAnswer());
 					System.out.println("Part 2:\n" + day2.getAnswerPart2());
 					break;
 				}

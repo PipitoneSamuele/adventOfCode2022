@@ -23,8 +23,6 @@ public class Day2 {
 		mapPart1.put("C Z", 6);
 	}
 	
-	
-	
 	/*scoreboard for every case in part 2
 	 * 
 	 * /* 9633 - 12856 - 13071
@@ -47,37 +45,28 @@ public class Day2 {
 	
 	public int getAnswer() {
 		
-		//variables
-		String input = "";
-		String lines[] = null;
-		int tot = 0;
-		
 		initializeMap1();
 		
-		//read input
-		try {
-			input = Files.readString(Path.of("src/day2/input.txt"));
-			lines = input.split("\\r?\\n");
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-		
-		//calculate with our scoreboard
-		for(String s : lines) {
-			tot += mapPart1.get(s);
-		}
+		int tot = calculate(mapPart1);
 		
 		return tot;
 	}
 	
 	public int getAnswerPart2() {
+				
+		initializeMap2();
+		
+		int tot = calculate(mapPart2);
+		
+		return tot;
+	}
+	
+	public int calculate(Map<String, Integer> map) {
 		
 		//variables
 		String input = "";
 		String lines[] = null;
 		int tot = 0;
-				
-		initializeMap2();
 		
 		//read input
 		try {
@@ -91,7 +80,6 @@ public class Day2 {
 		for(String s : lines) {
 			tot += mapPart1.get(s);
 		}
-		
 		return tot;
 	}
 	
